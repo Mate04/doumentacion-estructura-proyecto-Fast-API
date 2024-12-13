@@ -1,6 +1,6 @@
-from typing import TypeVar, Generic, Type, List
 from sqlmodel import Session, SQLModel
 from database_conexion import engine
+from typing import TypeVar, Generic, Type, List
 
 
 T = TypeVar("T", bound=SQLModel)
