@@ -12,3 +12,9 @@ class HeroRepository(BaseRepository[Hero]):
             query = select(Hero).where(Hero.secret_name==name)
             result =  session.exec(query).first()
             return result
+        
+    def findByName(self,name:str):
+        with self.get_session() as session:
+            query = select(Hero).where(Hero.name==name)
+            result =  session.exec(query).first()
+            return result
