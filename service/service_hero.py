@@ -15,7 +15,7 @@ class HeroService:
         resultado = self.repository.findByName(hero.name)
         if (resultado != None):
             return "Ya existe este nombre"
-        hero_new = Hero(name=hero.name,secret_name=hero.name_secret, age=hero.age )
+        hero_new = Hero(name=hero.name,secret_name=hero.secret_name, age=hero.age )
         hero_new = self.repository.add(hero_new)
 
         return hero_new
